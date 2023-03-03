@@ -91,6 +91,7 @@ input[type="password"] {
 button {
     display: inline-block;
     font-family: inherit;
+    box-sizing: initial;
     max-width: fit-content;
     font-size: 1rem;
     background-color: #0b2244;
@@ -99,6 +100,16 @@ button {
     border: none;
     padding: .5rem 3rem;
     box-shadow: 2px 3px 3px #9aa0a6;
+}
+
+button:hover {
+    transform: translate(.5px, -1px);
+    box-shadow: 3px 5px 5px #9aa0a6;
+}
+
+button:active {
+    transform: translate(-1px, 2px);
+    box-shadow: none;
 }
 
 :invalid {
