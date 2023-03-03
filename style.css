@@ -17,6 +17,7 @@ body, html {
     align-items: center;
     box-sizing: border-box;
     font-family: AvantGarde, sans-serif;
+    background-color: #f9f8f4;
 }
 
 .hero {
@@ -52,6 +53,7 @@ body, html {
     gap: 20px;
     background-color: #dce5ee;
     padding: 2vw;
+    box-shadow: 0 5px 5px #c6ced6;
 }
 
 .contact {
@@ -72,5 +74,13 @@ body, html {
 
 button {
     display: inline-block;
-    max-width: 80px;
+    font-family: inherit;
+    max-width: fit-content;
+    font-size: 1rem;
+    background-color: #0b2244;
+    color: #f9f8f4;
+    border-radius: 8px;
+    border: none;
+    padding: .5rem 3rem;
+    box-shadow: 2px 3px 3px #9aa0a6;
 }
