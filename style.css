@@ -7,6 +7,17 @@
     box-sizing: inherit;
 }
 
+:root {
+    --main-bg-color: #f9f8f4;
+    --form-bg-color: #dce5ee;
+    --form-shadow-color: #c6ced6;
+    --help-text-color: #44474b;
+    --btn-color: #0b2244;
+    --btn-shadow-color: #9aa0a6;
+    --caption-color: #ffffff;
+    --invalid-color: #ff0000;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -18,7 +29,7 @@ body, html {
     flex-wrap: wrap;
     box-sizing: border-box;
     font-family: AvantGarde, sans-serif;
-    background-color: #f9f8f4;
+    background-color: var(--main-bg-color);
 }
 
 .hero {
@@ -36,7 +47,7 @@ body, html {
     bottom: 3rem;
     width: 100%;
     text-align: center;
-    color: white;
+    color: var(--caption-color);
 }
 
 .info-container {
@@ -52,9 +63,9 @@ body, html {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #dce5ee;
+    background-color: var(--form-bg-color);
     padding: 2vw;
-    box-shadow: 0 5px 5px #c6ced6;
+    box-shadow: 0 5px 5px var(--form-shadow-color);
 }
 
 .contact {
@@ -80,7 +91,7 @@ input[type="password"] {
 
 .help-text {
     font-size: .8rem;
-    color: #6e7277;
+    color: var(--help-text-color);
     width: 350px;
 }
 
@@ -94,17 +105,17 @@ button {
     box-sizing: initial;
     max-width: fit-content;
     font-size: 1rem;
-    background-color: #0b2244;
-    color: #f9f8f4;
+    background-color: var(--btn-color);
+    color: var(--main-bg-color);
     border-radius: 8px;
     border: none;
     padding: .5rem 3rem;
-    box-shadow: 2px 3px 3px #9aa0a6;
+    box-shadow: 2px 3px 3px var(--btn-shadow-color);
 }
 
 button:hover {
     transform: translate(.5px, -1px);
-    box-shadow: 3px 5px 5px #9aa0a6;
+    box-shadow: 3px 5px 5px var(--btn-shadow-color);
 }
 
 button:active {
@@ -113,5 +124,5 @@ button:active {
 }
 
 :invalid {
-    border-color: red;
+    border-color: var(--invalid-color);
 }
