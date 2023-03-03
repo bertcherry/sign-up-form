@@ -21,29 +21,37 @@
             <div class="form-container">
                 <h1>Let's get started!</h1>
                 <div class="contact">
+                    <div class="help-text">Required fields are marked with <span aria-label="required">*</span></div>
                     <div class="form-item">
                         <label for="first_name">First Name</label>
-                        <input type="text" name="first_name" id="first_name">
+                        <input type="text" name="first_name" id="first_name" autocomplete="given-name" placeholder="Alex">
                     </div>
                     <div class="form-item">
                         <label for="last_name">Last Name</label>
-                        <input type="text" name="last_name" id="last_name">
+                        <input type="text" name="last_name" id="last_name" autocomplete="family-name" placeholder="Doe">
                     </div>
                     <div class="form-item">
                         <label for="email">Email<span aria-label="required">*</span></label>
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" name="email" id="email" autocomplete="email" placeholder="alexdoe@example.com" required>
                     </div>
                     <div class="form-item">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" name="phone" id="phone">
+                        <input type="tel" name="phone" id="phone" autocomplete="tel-national" placeholder="(800) 555-1234">
+                    </div>
+                    <div class="help-text">Password must:
+                        <ul>
+                            <li>Be at least 8 characters long</li>
+                            <li>Contain uppercase & lowercase letters</li>
+                            <li>Contain a number</li>
+                        </ul>
                     </div>
                     <div class="form-item">
-                        <label for="password">Password<span aria-label="required">*</span></label>
-                        <input type="password" name="password" id="password" required>
+                        <label for="password">Set Password<span aria-label="required">*</span></label>
+                        <input type="password" name="password" id="password" autocomplete="new-password" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                     </div>
                     <div class="form-item">
                         <label for="password_confirm">Confirm Password<span aria-label="required">*</span></label>
-                        <input type="password" name="password_confirm" id="password_confirm" required>
+                        <input type="password" name="password_confirm" id="password_confirm" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                     </div>    
                 </div>
                 <div class="checkbox">
