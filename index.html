@@ -17,7 +17,7 @@
             <p>This is not a real service, but wouldn't it be fun if this existed in real life?</p>
             <p>Sign up now using as made up of credentials as this service, and change your world.</p>
         </div>
-        <form action="" method="get" id="contact-form">
+        <form action="" method="get" id="contact-form" novalidate>
             <div class="form-container">
                 <h1>Let's get started!</h1>
                 <div class="contact">
@@ -33,16 +33,19 @@
                     <div class="form-item">
                         <label for="email">Email<span aria-label="required">*</span></label>
                         <input type="email" name="email" id="email" autocomplete="email" placeholder="alexdoe@example.com" required>
+                        <span class="error" aria-live="polite"></span>
                     </div>
                     <div class="form-item">
                         <label for="phone">Phone Number</label>
                         <input type="tel" name="phone" id="phone" autocomplete="tel-national" placeholder="(800) 555-1234">
+                        <span class="error" aria-live="polite"></span>
                     </div>
                     <div class="help-text">Password must:
                         <ul>
-                            <li>Be at least 8 characters long</li>
-                            <li>Contain uppercase & lowercase letters</li>
-                            <li>Contain a number</li>
+                            <li>Be at least 8 characters long<span class="error" aria-live="polite" id="pw-length"></span></li>
+                            <li>Contain uppercase & lowercase letters<span class="error" aria-live="polite" id="pw-case"></span></li>
+                            <li>Contain a number<span class="error" aria-live="polite" id="pw-num"></span></li>
+                            <li>Password confirmation must match<span class="error" aria-live="polite" id="pw-match"></span></li>
                         </ul>
                     </div>
                     <div class="form-item">
