@@ -12,6 +12,20 @@ function checkPassword() {
     }
 }
 
+const formElements = {
+    form: document.getElementById('contact-form'),
+    email: document.getElementById('email'),
+    emailError: document.querySelector('#email + span.error'),
+    phone: document.getElementById('phone'),
+    phoneError: document.querySelector('#phone + span.error'),
+    password: document.getElementById('password'),
+    password2: document.getElementById('password_confirm'),
+    pwLengthValidity: document.getElementById('pw-length'),
+    pwCaseValidity: document.getElementById('pw-case'),
+    pwNumValidity: document.getElementById('pw-num'),
+    pwMatchValidity: document.getElementById('pw-match'),
+}
+
 //Event listener for button activation
 const form = document.getElementById("contact-form");
 
