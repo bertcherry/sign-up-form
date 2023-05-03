@@ -1,4 +1,4 @@
-//validate email input
+//validate email and phone inputs
 const validateInput = (inputId) => {
     const inputElement = document.getElementById(inputId);
     const errorSpan = document.querySelector(`#${inputid} + span.error`);
@@ -16,8 +16,6 @@ const validateInput = (inputId) => {
         }
     }
 }
-
-
 
 //compare password:password_confirm, return invalid & help text on confirm if false
 function checkPassword() {
