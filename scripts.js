@@ -1,3 +1,24 @@
+//validate email input
+const validateInput = (inputId) => {
+    const inputElement = document.getElementById(inputId);
+    const errorSpan = document.querySelector(`#${inputid} + span.error`);
+    if (inputElement.validity.valid) {
+        errorSpan.textContent = '';
+        errorSpan.className = 'error';
+    } else if (!inputElement.validity.valid) {
+        inputElement.className = 'error active';
+        if (inputElement.validity.valueMissing) {
+            errorSpan.textContent = 'Complete this field.';
+        } else if (inputId = 'email' && inputElement.validity.typeMismatch) {
+            errorSpan.textContent = 'Please enter a valid email address.';
+        } else if (inputId = 'phone' && inputElement.validity.typeMismatch) {
+            errorSpan.textContent = 'Please enter a phone number in the following format: (800) 555-1234';
+        }
+    }
+}
+
+
+
 //compare password:password_confirm, return invalid & help text on confirm if false
 function checkPassword() {
     const password = form.password.value;
