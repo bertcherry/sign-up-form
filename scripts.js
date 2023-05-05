@@ -6,7 +6,7 @@ const validateInput = (inputId) => {
         errorSpan.textContent = '';
         errorSpan.className = 'error';
     } else if (!inputElement.validity.valid) {
-        inputElement.className = 'error active';
+        errorSpan.className = 'error active';
         if (inputElement.validity.valueMissing) {
             errorSpan.textContent = 'Complete this field.';
         } else if (inputId = 'email' && inputElement.validity.typeMismatch) {
@@ -55,7 +55,6 @@ const validatePassword = () => {
     }
 }
 
-
 //Validate form on submit as well
 const validateForm = (e) => {
     e.preventDefault();
@@ -68,7 +67,6 @@ const validateForm = (e) => {
 const handleBlur = (e) => {
     const inputId = e.currentTarget.id;
     const inputElement = document.getElementById(inputId);
-    //need to split into their own if statements to create the unique listener status change
     if (inputId === 'email' || inputId === 'phone') {
         validateInput(inputId);
         inputElement.addEventListener('input', handleInput);
@@ -105,7 +103,7 @@ const formElements = {
 const form = document.getElementById('contact-form');
 form.addEventListener('submit', validateForm);
 
-//Event listeners for first blur
+//Event listeners for first blur - individual so blur to input flip occurs for each field
 const emailInput = document.getElementById('email');
 emailInput.addEventListener('blur', handleBlur);
 
